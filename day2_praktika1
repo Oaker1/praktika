@@ -1,0 +1,10 @@
+#include <iostream>
+
+int CompareMas(int* source, int* dest, unsigned int size){
+ return 0;
+}
+
+int main()
+{
+
+}
