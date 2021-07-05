@@ -112,9 +112,9 @@ int testCompare()
 	Node *dest = new Node;
 	init (dest);
 	if (compareMas(source,dest) == 0)
-	return -1;
-	else
 	return 0;
+	else
+	return -1;
 }
 
 int testPush()
@@ -124,9 +124,9 @@ int testPush()
 	Node node{1};
 	pushNode(head, new Node);
 	if ((head->val != 0) or (head->next->val !=1))
-	return -1;
-	else
 	return 0;
+	else
+	return -1;
 }
 
 int testInit()
@@ -146,23 +146,6 @@ int testShow()
 	Node node{1};
 	show(head);
 	return 0;
-}
-
-int compareMas(Node* source, Node* dest)
-{
-	Node *list1 = source;
-	Node *list2 = dest;
-	int a = 0;
-	while ((list1 != NULL) and (list2 != NULL))
-	{
-		if(list1->val != list2->val)
-			a = -1;
-		else
-			a = 0;
-		list1 = list1->next;
-		list2 = list2->next;
-	}
-  return a;
 }
 
 static void runTest(int (*testFunction)(),const std::string& testName)
